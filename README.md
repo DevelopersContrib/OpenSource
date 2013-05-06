@@ -30,8 +30,8 @@ Contrib Survey Library Function Documentation
         template - (required) template filename<br>
         title - (required) title of survey<br>
   return:<br>
-        true - if survey created successfully<br>
-        false - if failed<br>
+        array('success'=>true, 'sid'=>'xxxxx') - if survey created successfully<br>
+        array('success'=>false) - if failed<br>
   possible error:<br>
         array('error'=> array('title parameter required','template parameter required')<br>
         
