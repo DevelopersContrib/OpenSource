@@ -13,12 +13,12 @@ Installation
 Contrib Survey Library Function Documentation
 
 1. authenticate - authenticates user to use contrib survey application 
-  return:
+  return:<br>
         true (if authentication success)  
         false (if authentication failed)
             
 2. gettemplates - get all survey templates
-  return:
+  return:<br>
         array of template php filenames e.g array('AskPeopleDefault.php','CorporateBoxes.php','Floral.php',...)
 
 3. getqtypes - get all question types
