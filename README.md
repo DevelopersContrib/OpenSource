@@ -12,57 +12,57 @@ Installation
 
 Contrib Survey Library Function Documentation
 
-1. authenticate - authenticates user to use contrib survey application 
+1. authenticate - authenticates user to use contrib survey application <br>
   return:<br>
-        true (if authentication success)  
-        false (if authentication failed)
+        true (if authentication success)  <br>
+        false (if authentication failed)<br>
             
-2. gettemplates - get all survey templates
+2. gettemplates - get all survey templates<br>
   return:<br>
-        array of template php filenames e.g array('AskPeopleDefault.php','CorporateBoxes.php','Floral.php',...)
+        array of template php filenames e.g array('AskPeopleDefault.php','CorporateBoxes.php','Floral.php',...)<br>
 
-3. getqtypes - get all question types
-  return:
-        array of question types e.g. array('single','dropdown','multi',...) 
+3. getqtypes - get all question types<br>
+  return:<br>
+        array of question types e.g. array('single','dropdown','multi',...) <br>
 
-4. createsurvey - create new survey
-  parameter:  
-        template - (required) template filename
-        title - (required) title of survey
-  return:
-        true - if survey created successfully
-        false - if failed
-  possible error:
-        array('error'=> array('title parameter required','template parameter required')
+4. createsurvey - create new survey<br>
+  parameter: <br> 
+        template - (required) template filename<br>
+        title - (required) title of survey<br>
+  return:<br>
+        true - if survey created successfully<br>
+        false - if failed<br>
+  possible error:<br>
+        array('error'=> array('title parameter required','template parameter required')<br>
         
-5. getsurveys - get all the list or surveys created
-  return:
-        array of survey id and title details e.g   array('sid'=>'xxxxx','title'=>'xxxxx')
+5. getsurveys - get all the list or surveys created<br>
+  return:<br>
+        array of survey id and title details e.g   array('sid'=>'xxxxx','title'=>'xxxxx')<br>
              
-6. addquestion - add a question in a survey
-  parameter:
-        sid - (required) survey id
-        qtype - (required)  question type (single, dropdown, multi,bigbox, smallbox,pagebreak, info)
-        qvalid - (required) validation (optional, required)
-        question - (required) survey question text
-        options - (required for Single/Dropdown/Multi question type) choices for question separated by (|)
-                  e.g. (a.Red|b.Blue|c.Green|d.Black)        
-  return:
-        true - if success
-        false - if failed
-   possible error:
+6. addquestion - add a question in a survey<br>
+  parameter:<br>
+        sid - (required) survey id<br>
+        qtype - (required)  question type (single, dropdown, multi,bigbox, smallbox,pagebreak, info)<br>
+        qvalid - (required) validation (optional, required)<br>
+        question - (required) survey question text<br>
+        options - (required for Single/Dropdown/Multi question type) choices for question separated by (|)<br>
+                  e.g. (a.Red|b.Blue|c.Green|d.Black)<br>        
+  return:<br>
+        true - if success<br>
+        false - if failed<br>
+   possible error:<br>
         array('error'=> array('invalid sid',
                               'sid parameter required',
                               'qtype parameter required',
                               'qvalid parameter required',
                               'question parameter required'
-                        )
+                        )<br>
 
-7. getquestions - get all questions in a survey
-  parameter:
-        sid - (required) survey id
-  return:
-        array of question details object      
+7. getquestions - get all questions in a survey<br>
+  parameter:<br>
+        sid - (required) survey id<br>
+  return:<br>
+        array of question details object      <br>
         e.g array(1) {
         [0]=>
         object(stdClass)#16 (6) {
@@ -87,64 +87,64 @@ Contrib Survey Library Function Documentation
           }
           ["scale"]=>
           NULL
-        }
-  possible error:
-        array('error'=> array('invalid sid')
+        }<br>
+  possible error:<br>
+        array('error'=> array('invalid sid')<br>
              
-8. editsurvey - edit survey details
-  parameter:
-        sid - (required) survey id
-        title - (required) new survey title
-        template - (optional) template filename
-  return:
-        true - if edit successful
-        false - if failed
-  possible error:
-        array('error'=> array('invalid sid','sid parameter required','title parameter required')
+8. editsurvey - edit survey details<br>
+  parameter:<br>
+        sid - (required) survey id<br>
+        title - (required) new survey title<br>
+        template - (optional) template filename<br>
+  return:<br>
+        true - if edit successful<br>
+        false - if failed<br>
+  possible error:<br>
+        array('error'=> array('invalid sid','sid parameter required','title parameter required')<br>
 
-9. editquestion - edit question in a survey
-  parameter:
-        sid - (required) survey id
-        qid - (required) question id
-        qtype - (required)  question type (single, dropdown, multi,bigbox, smallbox,pagebreak, info)
-        qvalid - (required) validation (optional, required)
-        question - (required) survey question text
-        options - (required for Single/Dropdown/Multi question type) choices for question separated by (|)
-                  e.g. (a.Red|b.Blue|c.Green|d.Black)
-  return:
-        true - if edit successful
-        false - if failed
+9. editquestion - edit question in a survey<br>
+  parameter:<br>
+        sid - (required) survey id<br>
+        qid - (required) question id<br>
+        qtype - (required)  question type (single, dropdown, multi,bigbox, smallbox,pagebreak, info)<br>
+        qvalid - (required) validation (optional, required)<br>
+        question - (required) survey question text<br>
+        options - (required for Single/Dropdown/Multi question type) choices for question separated by (|)<br>
+                  e.g. (a.Red|b.Blue|c.Green|d.Black)<br>
+  return:<br>
+        true - if edit successful<br>
+        false - if failed<br>
         
-  possible error:
-        array('error'=> array('invalid sid','invalid qid','sid parameter required','title parameter required')
+  possible error:<br>
+        array('error'=> array('invalid sid','invalid qid','sid parameter required','title parameter required')<br>
 
 
-10. deletequestion - delete a question in a survey
-  parameter:
-        sid - (required) survey id
-        qid - (required) question id
-  return:
-        true - if delete successful
-        false - if failed
-  possible error:
-        array('error'=> array('invalid sid','invalid qid','sid parameter required','qid parameter required')
+10. deletequestion - delete a question in a survey<br>
+  parameter:<br>
+        sid - (required) survey id<br>
+        qid - (required) question id<br>
+  return:<br>
+        true - if delete successful<br>
+        false - if failed<br>
+  possible error:<br>
+        array('error'=> array('invalid sid','invalid qid','sid parameter required','qid parameter required')<br>
 
-11. deletesurvey - delete survey
-  parameter:
-        sid - (required) survey id
-  return:
-        true - if delete successful
-        false - if failed
-  possible error:
-        array('error'=> array('invalid sid','sid parameter required')
+11. deletesurvey - delete survey<br>
+  parameter:<br>
+        sid - (required) survey id<br>
+  return:<br>
+        true - if delete successful<br>
+        false - if failed<br>
+  possible error:<br>
+        array('error'=> array('invalid sid','sid parameter required')<br>
 
-12. getreport - get statistics/report of a survey
-  parameter:
-        sid - (required) survey id
-        qid - (optional) question id, default is 'all'
-  return:
-        array of question and answer details object
-        e.g 
+12. getreport - get statistics/report of a survey<br>
+  parameter:<br>
+        sid - (required) survey id<br>
+        qid - (optional) question id, default is 'all'<br>
+  return:<br>
+        array of question and answer details object<br>
+        e.g <br>
     array(1) {
     [0]=>
     object(stdClass)#16 (5) {
@@ -198,8 +198,8 @@ Contrib Survey Library Function Documentation
     }         
    } 
    
-  possible error:
-        array('error'=> array('invalid sid')
+  possible error:<br>
+        array('error'=> array('invalid sid')<br>
            
 List of general errors
    
