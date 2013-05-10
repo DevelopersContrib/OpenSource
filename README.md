@@ -37,7 +37,7 @@ Contrib Survey Library Function Documentation
         
 5. getsurveys - get all the list or surveys created<br>
   return:<br>
-        array of survey id and title details e.g   array('sid'=>'xxxxx','title'=>'xxxxx')<br>
+        array of survey id and title details e.g   array('sid'=>'xxxxx','title'=>'xxxxx','template'=>'Floral.php')<br>
              
 6. addquestion - add a question in a survey<br>
   parameter:<br>

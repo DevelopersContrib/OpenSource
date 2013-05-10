@@ -24,14 +24,14 @@ class ContribSurvey {
 	 	 }
 	 }
 	 
-	  function adduser(){
+	  private function adduser(){
 	 	$url = $this->api_url."?request=adduser&api_key=".$this->api_key;
 	 	$result = $this->getresult($url);
 	 	$res = json_decode($result);
 	 	return $res[0]->success;
 	 }
 	 
-	  function checkexist(){
+	  private function checkexist(){
 	 	$url = $this->api_url."?request=checkexist&api_key=".$this->api_key;
 	 	$result = $this->getresult($url);
 	 	$res = json_decode($result);
@@ -56,7 +56,7 @@ class ContribSurvey {
 	 	$url = $this->api_url."?request=createsurvey&api_key=".$this->api_key."&template=".urlencode($template)."&title=".urlencode($title);
 	 	$result = $this->getresult($url);
 	 	$res = json_decode($result);
-	 	return $res[0]->success;
+	 	return $res;
 	 }
 	 
 	  function getsurveys(){
@@ -80,8 +80,8 @@ class ContribSurvey {
 	 	return $res;	 	
 	 }
 	 
-	  function editsurvey($sid,$title){
-	 	$url = $this->api_url."?request=editsurvey&api_key=".$this->api_key."&sid=".$sid."&title=".urlencode($title);
+	  function editsurvey($sid,$title,$template){
+	 	$url = $this->api_url."?request=editsurvey&api_key=".$this->api_key."&sid=".$sid."&title=".urlencode($title)."&template=".$template;
 	 	$result = $this->getresult($url);
 	 	$res = json_decode($result);
 	 	return $res[0]->success;
