@@ -1,10 +1,9 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class CSurvey extends CI_Controller {
-	private $param = array("key"=>"a088239f8263dc8f");
+	private $param = array("key"=>"xxxx");//get api_key from http://www.developers.contrib.com
 
-   function __construct()
-	{
+   function __construct(){
 		parent::__construct();
 		$this->load->helper(array('form', 'url'));
 	    $this->load->library('session');
@@ -12,65 +11,54 @@ class CSurvey extends CI_Controller {
 	    $this->load->library('contribsurvey',$this->param);
 	}
 	
-	public function index()
-	{
-		//$ress = $this->contribsurvey->getsurveys();
-		//var_dump($ress);
-		$ress = $this->contribsurvey->getsurveys();
-		$data['surveylist']= $ress;
-		$this->load->view('surveylist',$data);
-	
+	public function index(){
+		$ress = $this->contribsurvey->getsurveys();		// Fetch all surveys available
+		$data['surveylist']= $ress;						// Sample response: [{"sid" : "08F54B", "title" : "Weight Management Survey", "template" : "AskPeopleDefault.php"}]
+		$this->load->view('backend/index',$data);
 	}
 	
-	public function gettemplates(){
-		$ress = $this->contribsurvey->gettemplates();
-		var_dump($ress);
+    public function getsurveys(){	
+		$ress = $this->contribsurvey->getsurveys();	// Fetch all surveys available
+		$data['surveylist']= $ress;					// Sample response: [{"sid" : "08F54B", "title" : "Weight Management Survey", "template" : "AskPeopleDefault.php"}]
+		$this->load->view('backend/index',$data);
+	}
+
+	public function showAddSurvey(){
+		$data['templates'] = $this->contribsurvey->gettemplates(); 	// Fetch all survey templates available
+		$this->load->view('backend/surveycreate',$data);			// Sample response: [{"tempalte1", tempalte2", "tempalte3, "tempalte4", "tempalte5"}]
 	}
 	
-    public function getsurveys(){
-		$ress = $this->contribsurvey->getsurveys();
-		$data['surveylist']= $ress;
-		$this->load->view('surveylist',$data);
-	}
-	
-	public function addquestion(){
+	public function createsurvey(){
+		$title = $this->db->escape_str($this->input->post('title'));		// Required parameter
+		$template = $this->db->escape_str($this->input->post('template'));	// Required parameter
 		
-		$sid = $this->db->escape_str($this->input->post('sid'));
-		$qtype = $this->db->escape_str($this->input->post('qtype'));
-		$qvalid = $this->db->escape_str($this->input->post('qvalid'));
-		$question = $this->db->escape_str($this->input->post('question'));
-		$response = explode("\n",$this->input->post('options'));
-		$options = "";
-		foreach($response AS $r){
-			$options = $options."|".$r;
-		}
-		
-		
-		if($this->contribsurvey->addquestion($sid,$qtype,$qvalid,$question,urlencode(substr($options, 1)))){
-			echo "OK";
-		}
-		
-	}
-	
-	public function createsurvey(){ //ADD TO ORIGINAL CONTROLLER
-		
-		$title = $this->db->escape_str($this->input->post('title'));
-		$template = $this->db->escape_str($this->input->post('template'));
-		$res = $this->contribsurvey->createsurvey($template,$title);
-		$val = $res[0];
+		$res = $this->contribsurvey->createsurvey($template,$title);	// Creates a new survey
+		$val = $res[0];													// Sample response: [{"success" : true, "sid" : "08F54B"}]
 	
 		if($val->success===true){ 
 			echo ':true:'.$val->sid;
 		}else
 			echo 'false';
-
+	}
+	
+	public function deletesurvey(){
+		$sid = $this->db->escape_str($this->input->post('sid'));	// Required parameter
+		if($this->contribsurvey->deletesurvey($sid)){				// Deletes selected survey
+			echo "OK";
+		}
+	}
+	
+	public function addquestionform(){
+		$sid = $this->db->escape_str($this->input->post('sid'));	
+		$data['sid'] = $sid;
+		$this->load->view('backend/questioncreate',$data);
 	}
 	
 	public function getquestions(){
-		$sid = $this->db->escape_str($this->input->get('sid'));
-		$surveyquestions = $this->contribsurvey->getquestions($sid);
+		$sid = $this->db->escape_str($this->input->get('sid'));			// Required parameter
+		$surveyquestions = $this->contribsurvey->getquestions($sid);	// Fetch all questionnaires available
 		
-		$data['surveyquestions'] = $surveyquestions;
+		$data['surveyquestions'] = $surveyquestions;					// Sample response: [{"questionid" : "1", "type" : "single", "validation" : "optional", "questiontext" : "What is your favorite color?", "options" : NULL, "scale" : NULL }]
 		$data['templates'] = $this->contribsurvey->gettemplates();
 		$data['sid'] = $sid;
 			$surveys = $this->contribsurvey->getsurveys();
@@ -80,102 +68,89 @@ class CSurvey extends CI_Controller {
 					$data['template'] = $survey->template;
 				}
 			}
-		$this->load->view('surveyquestions',$data);
+		$this->load->view('backend/surveyquestions',$data);
 	}
 	
-	public function editsurvey(){
-		//$sid = "886598";
-		//$title = "People Color Favorites Updated";
-		$sid = $this->db->escape_str($this->input->post('sid'));
-		$title = $this->db->escape_str($this->input->post('title'));
-		$template = $this->db->escape_str($this->input->post('template'));
-		if($this->contribsurvey->editsurvey($sid,$title,$template)){
+	public function addquestion(){	
+		$sid = $this->db->escape_str($this->input->post('sid'));			// Required parameter
+		$qtype = $this->db->escape_str($this->input->post('qtype'));		// Required parameter
+		$qvalid = $this->db->escape_str($this->input->post('qvalid'));		// Required parameter
+		$question = $this->db->escape_str($this->input->post('question'));	// Required parameter
+		$response = explode("\n",$this->input->post('options'));			// Optional parameter
+		$options = "";
+		foreach($response AS $r){
+			$options = $options."|".$r;
+		}
+		if($this->contribsurvey->addquestion($sid,$qtype,$qvalid,$question,urlencode(substr($options, 1)))){ // Adds a question under a specific survey
 			echo "OK";
 		}
 	}
 	
-    public function editquestion(){
-		$sid = $this->db->escape_str($this->input->post('sid'));
-		$qid = $this->db->escape_str($this->input->post('qid'));
-		$question = $this->db->escape_str($this->input->post('title'));
-		$qvalid = $this->db->escape_str($this->input->post('validation'));
-		$qtype = $this->db->escape_str($this->input->post('qtype'));
+	public function getquestiondetails(){
+		$sid = $this->db->escape_str($this->input->post('sid'));				// Required parameter
+		$qid = $this->db->escape_str($this->input->post('qid'));				// Required parameter
+		$data['surveyquestions'] = $this->contribsurvey->getquestions($sid);	// Fetch questionnaire details
+		$data['qid'] = $qid;
+		$data['sid'] = $sid;
+		$this->load->view('backend/questionedit',$data);
+	}
+	
+	public function editquestion(){
+		$sid = $this->db->escape_str($this->input->post('sid'));				// Required parameter
+		$qid = $this->db->escape_str($this->input->post('qid'));				// Required parameter
+		$question = $this->db->escape_str($this->input->post('title'));			// Required parameter
+		$qvalid = $this->db->escape_str($this->input->post('validation'));		// Required parameter
+		$qtype = $this->db->escape_str($this->input->post('qtype'));			// Required parameter
 		
-		$response = explode("\n",trim($this->input->post('responses')));
+		$response = explode("\n",trim($this->input->post('responses')));		// Optional parameter
 		$options = "";
 		foreach($response AS $r){
 			$options = $options."|".$r;
 		}
 		
-		if($this->contribsurvey->editquestion($sid,$qid,$qtype,$qvalid,$question,urlencode(substr($options, 1)))){
+		if($this->contribsurvey->editquestion($sid,$qid,$qtype,$qvalid,$question,urlencode(substr($options, 1)))){	// Updates questionnaire details
 			echo "OK";
 		}
-		
-		//echo $responses;
 	}
 	
 	public function deletequestion(){
-		$sid = $this->db->escape_str($this->input->post('sid'));
-		$qid = $this->db->escape_str($this->input->post('qid'));
+		$sid = $this->db->escape_str($this->input->post('sid'));	// Required parameter
+		$qid = $this->db->escape_str($this->input->post('qid'));	// Required parameter
 	
-		if($this->contribsurvey->deletequestion($sid,$qid)){
-			echo "OK";
-		}
-	}
-	
-	public function deletesurvey(){
-		$sid = $this->db->escape_str($this->input->post('sid'));
-		if($this->contribsurvey->deletesurvey($sid)){
+		if($this->contribsurvey->deletequestion($sid,$qid)){		// Deletes selected questionnaire from survey
 			echo "OK";
 		}
 	}
 	
 	public function getreport(){
-		//$sid = "886598";
-		$sid = $this->db->escape_str($this->input->post('sid'));
-		$qid = "all";
-		$stats = $this->contribsurvey->getreport($sid,$qid);
+		$sid = $this->db->escape_str($this->input->post('sid'));	// Required parameter
+		$qid = "all";												// Required parameter
+		$stats = $this->contribsurvey->getreport($sid,$qid);		// Fetches statistical results of a survey
 		if($stats){
-			$data['statistics'] = $stats;
-			$this->load->view('loadStatistics',$data);
+			$data['statistics'] = $stats;							// Sample response: [{ "questionid":"1", "questiontext":"Your favorite character", "answered":5, "total":"5", "stats":array()}]
+			$this->load->view('backend/surveystatistics',$data);
 		}else{
 			echo "error: ".$stats;
 		}
 	}
 	
-	public function getquestiondetails(){
-		$sid = $this->db->escape_str($this->input->post('sid'));
-		$qid = $this->db->escape_str($this->input->post('qid'));
-		$data['surveyquestions'] = $this->contribsurvey->getquestions($sid);
-		$data['qid'] = $qid;
-		$data['sid'] = $sid;
-		$this->load->view('editquestion',$data);
-	}
-	
-	public function showAddSurvey(){
-		$data['templates'] = $this->contribsurvey->gettemplates();
-		$this->load->view('createsurvey',$data);
-	}
-	
-	public function addquestionform(){
-		$sid = $this->db->escape_str($this->input->post('sid'));
-		$data['sid'] = $sid;
-		$this->load->view('createquestion',$data);
-	
+	public function LoadSurveyList(){
+		$ress = $this->contribsurvey->getsurveys();
+		$data['surveylist']= $ress;
+		$this->load->view('backend/surveymenu',$data);
 	}
 	
 	public function Loadquestionlist(){
 		$sid = $this->db->escape_str($this->input->post('sid'));
+		$qid = $this->db->escape_str($this->input->post('qid'));
 		$surveyquestions = $this->contribsurvey->getquestions($sid);
 		$data['surveyquestions'] = $surveyquestions;
 		$data['sid'] = $sid;
-		$this->load->view('questionlist',$data);
+		$data['qid'] = $qid;
+		$this->load->view('backend/questionmenu',$data);
 	}
 	
-	public function LoadSurveyList(){
-		$ress = $this->contribsurvey->getsurveys();
-		$data['surveylist']= $ress;
-		$this->load->view('loadsurveylist',$data);
-	}
+	
+	
 	
 } //end of class
