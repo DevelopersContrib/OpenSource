@@ -1,7 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class CSurvey extends CI_Controller {
-	private $param = array("key"=>"xxxx");//get api_key from http://www.developers.contrib.com
+	private $param = array("key"=>"xxxx");	//Get api_key from http://www.developers.contrib.com
 
    function __construct(){
 		parent::__construct();
@@ -13,26 +13,26 @@ class CSurvey extends CI_Controller {
 	
 	public function index(){
 		$ress = $this->contribsurvey->getsurveys();		// Fetch all surveys available
-		$data['surveylist']= $ress;						// Sample response: [{"sid" : "08F54B", "title" : "Weight Management Survey", "template" : "AskPeopleDefault.php"}]
+		$data['surveylist']= $ress;				// Sample response: [{"sid" : "08F54B", "title" : "Weight Management Survey", "template" : "AskPeopleDefault.php"}]
 		$this->load->view('backend/index',$data);
 	}
 	
     public function getsurveys(){	
 		$ress = $this->contribsurvey->getsurveys();	// Fetch all surveys available
-		$data['surveylist']= $ress;					// Sample response: [{"sid" : "08F54B", "title" : "Weight Management Survey", "template" : "AskPeopleDefault.php"}]
+		$data['surveylist']= $ress;			// Sample response: [{"sid" : "08F54B", "title" : "Weight Management Survey", "template" : "AskPeopleDefault.php"}]
 		$this->load->view('backend/index',$data);
 	}
 
 	public function showAddSurvey(){
 		$data['templates'] = $this->contribsurvey->gettemplates(); 	// Fetch all survey templates available
-		$this->load->view('backend/surveycreate',$data);			// Sample response: [{"tempalte1", tempalte2", "tempalte3, "tempalte4", "tempalte5"}]
+		$this->load->view('backend/surveycreate',$data);		// Sample response: [{"tempalte1", tempalte2", "tempalte3, "tempalte4", "tempalte5"}]
 	}
 	
 	public function createsurvey(){
 		$title = $this->db->escape_str($this->input->post('title'));		// Required parameter
 		$template = $this->db->escape_str($this->input->post('template'));	// Required parameter
 		
-		$res = $this->contribsurvey->createsurvey($template,$title);	// Creates a new survey
+		$res = $this->contribsurvey->createsurvey($template,$title);		// Creates a new survey
 		$val = $res[0];													// Sample response: [{"success" : true, "sid" : "08F54B"}]
 	
 		if($val->success===true){ 
@@ -41,9 +41,18 @@ class CSurvey extends CI_Controller {
 			echo 'false';
 	}
 	
+	public function editsurvey(){
+		$sid = $this->db->escape_str($this->input->post('sid'));		// Required parameter
+		$title = $this->db->escape_str($this->input->post('title'));		// Required parameter
+		$template = $this->db->escape_str($this->input->post('template'));	// Required parameter
+		if($this->contribsurvey->editsurvey($sid,$title,$template)){		// Updates survey
+			echo "OK";
+		}
+	}
+	
 	public function deletesurvey(){
 		$sid = $this->db->escape_str($this->input->post('sid'));	// Required parameter
-		if($this->contribsurvey->deletesurvey($sid)){				// Deletes selected survey
+		if($this->contribsurvey->deletesurvey($sid)){			// Deletes selected survey
 			echo "OK";
 		}
 	}
@@ -55,10 +64,10 @@ class CSurvey extends CI_Controller {
 	}
 	
 	public function getquestions(){
-		$sid = $this->db->escape_str($this->input->get('sid'));			// Required parameter
+		$sid = $this->db->escape_str($this->input->get('sid'));		// Required parameter
 		$surveyquestions = $this->contribsurvey->getquestions($sid);	// Fetch all questionnaires available
 		
-		$data['surveyquestions'] = $surveyquestions;					// Sample response: [{"questionid" : "1", "type" : "single", "validation" : "optional", "questiontext" : "What is your favorite color?", "options" : NULL, "scale" : NULL }]
+		$data['surveyquestions'] = $surveyquestions;			// Sample response: [{"questionid" : "1", "type" : "single", "validation" : "optional", "questiontext" : "What is your favorite color?", "options" : NULL, "scale" : NULL }]
 		$data['templates'] = $this->contribsurvey->gettemplates();
 		$data['sid'] = $sid;
 			$surveys = $this->contribsurvey->getsurveys();
@@ -72,11 +81,11 @@ class CSurvey extends CI_Controller {
 	}
 	
 	public function addquestion(){	
-		$sid = $this->db->escape_str($this->input->post('sid'));			// Required parameter
+		$sid = $this->db->escape_str($this->input->post('sid'));		// Required parameter
 		$qtype = $this->db->escape_str($this->input->post('qtype'));		// Required parameter
 		$qvalid = $this->db->escape_str($this->input->post('qvalid'));		// Required parameter
 		$question = $this->db->escape_str($this->input->post('question'));	// Required parameter
-		$response = explode("\n",$this->input->post('options'));			// Optional parameter
+		$response = explode("\n",$this->input->post('options'));		// Optional parameter
 		$options = "";
 		foreach($response AS $r){
 			$options = $options."|".$r;
@@ -87,8 +96,8 @@ class CSurvey extends CI_Controller {
 	}
 	
 	public function getquestiondetails(){
-		$sid = $this->db->escape_str($this->input->post('sid'));				// Required parameter
-		$qid = $this->db->escape_str($this->input->post('qid'));				// Required parameter
+		$sid = $this->db->escape_str($this->input->post('sid'));		// Required parameter
+		$qid = $this->db->escape_str($this->input->post('qid'));		// Required parameter
 		$data['surveyquestions'] = $this->contribsurvey->getquestions($sid);	// Fetch questionnaire details
 		$data['qid'] = $qid;
 		$data['sid'] = $sid;
@@ -96,8 +105,8 @@ class CSurvey extends CI_Controller {
 	}
 	
 	public function editquestion(){
-		$sid = $this->db->escape_str($this->input->post('sid'));				// Required parameter
-		$qid = $this->db->escape_str($this->input->post('qid'));				// Required parameter
+		$sid = $this->db->escape_str($this->input->post('sid'));			// Required parameter
+		$qid = $this->db->escape_str($this->input->post('qid'));			// Required parameter
 		$question = $this->db->escape_str($this->input->post('title'));			// Required parameter
 		$qvalid = $this->db->escape_str($this->input->post('validation'));		// Required parameter
 		$qtype = $this->db->escape_str($this->input->post('qtype'));			// Required parameter
@@ -127,7 +136,7 @@ class CSurvey extends CI_Controller {
 		$qid = "all";												// Required parameter
 		$stats = $this->contribsurvey->getreport($sid,$qid);		// Fetches statistical results of a survey
 		if($stats){
-			$data['statistics'] = $stats;							// Sample response: [{ "questionid":"1", "questiontext":"Your favorite character", "answered":5, "total":"5", "stats":array()}]
+			$data['statistics'] = $stats;				// Sample response: [{ "questionid":"1", "questiontext":"Your favorite character", "answered":5, "total":"5", "stats":array()}]
 			$this->load->view('backend/surveystatistics',$data);
 		}else{
 			echo "error: ".$stats;
