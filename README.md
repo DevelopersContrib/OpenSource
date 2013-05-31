@@ -1,7 +1,7 @@
-OpenSource
+Open Source Codeigniter Survey Library
 ==========
 
-OpenSource Contrib Survey App
+OpenSource Contrib Survey App is a Codeigniter library to create and monitor web surveys. Its easy to install and use.
 
 Installation
 
