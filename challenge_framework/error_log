@@ -1,0 +1,133 @@
+[24-Aug-2013 02:51:51] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Too many connections in /home/photocha/public_html/includes/config.php on line 87
+[24-Aug-2013 02:51:51] PHP Warning:  mysql_select_db(): supplied argument is not a valid MySQL-Link resource in /home/photocha/public_html/includes/config.php on line 91
+[24-Aug-2013 02:51:51] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Too many connections in /home/photocha/public_html/includes/config.php on line 87
+[24-Aug-2013 02:51:51] PHP Warning:  mysql_select_db(): supplied argument is not a valid MySQL-Link resource in /home/photocha/public_html/includes/config.php on line 91
+[24-Aug-2013 02:51:51] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Too many connections in /home/photocha/public_html/includes/config.php on line 87
+[24-Aug-2013 02:51:51] PHP Warning:  mysql_select_db(): supplied argument is not a valid MySQL-Link resource in /home/photocha/public_html/includes/config.php on line 91
+[24-Aug-2013 02:51:51] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user 'photocha'@'localhost' (using password: NO) in /home/photocha/public_html/includes/functions.php on line 133
+[24-Aug-2013 02:51:51] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established in /home/photocha/public_html/includes/functions.php on line 133
+[24-Aug-2013 02:51:51] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user 'photocha'@'localhost' (using password: NO) in /home/photocha/public_html/includes/functions.php on line 133
+[24-Aug-2013 02:51:51] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established in /home/photocha/public_html/includes/functions.php on line 133
+[24-Aug-2013 02:51:51] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user 'photocha'@'localhost' (using password: NO) in /home/photocha/public_html/includes/functions.php on line 158
+[24-Aug-2013 02:51:51] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established in /home/photocha/public_html/includes/functions.php on line 158
+[24-Aug-2013 02:51:52] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Too many connections in /home/photocha/public_html/includes/config.php on line 87
+[24-Aug-2013 02:51:52] PHP Warning:  mysql_select_db(): supplied argument is not a valid MySQL-Link resource in /home/photocha/public_html/includes/config.php on line 91
+[05-Sep-2013 01:57:43] PHP Parse error:  syntax error, unexpected $end, expecting ',' or ';' in /home/photocha/public_html/header_index.php on line 34
+[05-Sep-2013 01:57:43] PHP Parse error:  syntax error, unexpected $end, expecting ',' or ';' in /home/photocha/public_html/header_index.php on line 34
+[05-Sep-2013 03:06:32] PHP Fatal error:  Call to a member function get() on a non-object in /home/photocha/public_html/includes/config.php on line 91
+[05-Sep-2013 03:06:34] PHP Fatal error:  Call to a member function get() on a non-object in /home/photocha/public_html/includes/config.php on line 91
+[05-Sep-2013 03:06:57] PHP Fatal error:  Call to a member function get() on a non-object in /home/photocha/public_html/includes/config.php on line 91
+[05-Sep-2013 03:57:52] PHP Parse error:  syntax error, unexpected ';' in /home/photocha/public_html/includes/functions.php on line 104
+[05-Sep-2013 03:57:55] PHP Parse error:  syntax error, unexpected ';' in /home/photocha/public_html/includes/functions.php on line 104
+[05-Sep-2013 03:57:57] PHP Parse error:  syntax error, unexpected ';' in /home/photocha/public_html/includes/functions.php on line 104
+[05-Sep-2013 03:57:59] PHP Parse error:  syntax error, unexpected ';' in /home/photocha/public_html/includes/functions.php on line 104
+[05-Sep-2013 03:58:00] PHP Parse error:  syntax error, unexpected ';' in /home/photocha/public_html/includes/functions.php on line 104
+[05-Sep-2013 03:58:32] PHP Fatal error:  Class 'DIR_LIB' not found in /home/photocha/public_html/header_index.php on line 4
+[05-Sep-2013 03:58:38] PHP Fatal error:  Call to undefined method DateTime::diff() in /home/photocha/public_html/includes/functions.php on line 107
+[05-Sep-2013 04:01:43] PHP Parse error:  syntax error, unexpected $end in /home/photocha/public_html/includes/functions.php on line 52
+[05-Sep-2013 04:01:45] PHP Parse error:  syntax error, unexpected $end in /home/photocha/public_html/includes/functions.php on line 189
+[05-Sep-2013 04:01:48] PHP Fatal error:  Call to undefined function date_diff() in /home/photocha/public_html/includes/functions.php on line 107
+[05-Sep-2013 04:03:58] PHP Fatal error:  Call to undefined function date_diff() in /home/photocha/public_html/includes/functions.php on line 107
+[05-Sep-2013 04:04:03] PHP Warning:  date_create() expects parameter 1 to be string, object given in /home/photocha/public_html/includes/functions.php on line 99
+[05-Sep-2013 04:04:03] PHP Fatal error:  Call to a member function format() on a non-object in /home/photocha/public_html/includes/functions.php on line 124
+[05-Sep-2013 04:04:29] PHP Warning:  Unexpected character in input:  ''' (ASCII=39) state=1 in /home/photocha/public_html/includes/functions.php on line 284
+[05-Sep-2013 04:04:29] PHP Parse error:  syntax error, unexpected $end, expecting ']' in /home/photocha/public_html/includes/functions.php on line 284
+[05-Sep-2013 04:04:32] PHP Fatal error:  Call to a member function format() on a non-object in /home/photocha/public_html/includes/functions.php on line 124
+[05-Sep-2013 04:09:58] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_FUNCTION in /home/photocha/public_html/includes/functions.php on line 499
+[05-Sep-2013 04:11:38] PHP Warning:  date_create() expects parameter 1 to be string, object given in /home/photocha/public_html/includes/functions.php on line 101
+[05-Sep-2013 04:11:38] PHP Warning:  date_create() expects parameter 1 to be string, object given in /home/photocha/public_html/includes/functions.php on line 101
+[05-Sep-2013 04:12:25] PHP Warning:  date_create() expects parameter 1 to be string, object given in /home/photocha/public_html/includes/functions.php on line 101
+[05-Sep-2013 04:12:25] PHP Warning:  date_create() expects parameter 1 to be string, object given in /home/photocha/public_html/includes/functions.php on line 101
+[05-Sep-2013 04:24:25] PHP Parse error:  syntax error, unexpected $end in /home/photocha/public_html/includes/functions.php on line 541
+[05-Sep-2013 05:03:35] PHP Parse error:  syntax error, unexpected $end in /home/photocha/public_html/includes/functions.php on line 281
+[05-Sep-2013 05:04:10] PHP Parse error:  syntax error, unexpected $end in /home/photocha/public_html/includes/functions.php on line 281
+[05-Sep-2013 22:07:01] PHP Parse error:  syntax error, unexpected '.' in /home/photocha/public_html/includes/functions.php on line 127
+[05-Sep-2013 22:07:04] PHP Parse error:  syntax error, unexpected '.' in /home/photocha/public_html/includes/functions.php on line 127
+[05-Sep-2013 22:10:38] PHP Warning:  date() expects at least 1 parameter, 0 given in /home/photocha/public_html/includes/functions.php on line 127
+[05-Sep-2013 22:10:39] PHP Warning:  date() expects at least 1 parameter, 0 given in /home/photocha/public_html/includes/functions.php on line 127
+[05-Sep-2013 22:10:44] PHP Warning:  date() expects at least 1 parameter, 0 given in /home/photocha/public_html/includes/functions.php on line 127
+[05-Sep-2013 22:10:45] PHP Warning:  date() expects at least 1 parameter, 0 given in /home/photocha/public_html/includes/functions.php on line 127
+[05-Sep-2013 22:10:57] PHP Warning:  Unexpected character in input:  ''' (ASCII=39) state=1 in /home/photocha/public_html/includes/functions.php on line 320
+[05-Sep-2013 22:10:57] PHP Parse error:  syntax error, unexpected $end, expecting ']' in /home/photocha/public_html/includes/functions.php on line 320
+[05-Sep-2013 22:25:50] PHP Parse error:  syntax error, unexpected $end in /home/photocha/public_html/includes/functions.php on line 188
+[09-Sep-2013 02:21:32] PHP Warning:  Unexpected character in input:  ''' (ASCII=39) state=1 in /home/photocha/public_html/includes/meta_title.php on line 51
+[09-Sep-2013 02:21:32] PHP Parse error:  syntax error, unexpected $end in /home/photocha/public_html/includes/meta_title.php on line 51
+[09-Sep-2013 02:43:52] PHP Parse error:  syntax error, unexpected $end in /home/photocha/public_html/browse.php on line 64
+[09-Sep-2013 02:46:03] PHP Parse error:  syntax error, unexpected $end in /home/photocha/public_html/browse.php on line 64
+[09-Sep-2013 02:53:08] PHP Parse error:  syntax error, unexpected $end in /home/photocha/public_html/browse.php on line 64
+[09-Sep-2013 03:49:59] PHP Parse error:  syntax error, unexpected $end in /home/photocha/public_html/challenge.php on line 85
+[09-Sep-2013 03:52:44] PHP Parse error:  syntax error, unexpected $end in /home/photocha/public_html/challenge.php on line 24
+[09-Sep-2013 03:57:33] PHP Parse error:  syntax error, unexpected $end in /home/photocha/public_html/includes/functions.php on line 188
+[09-Sep-2013 03:57:37] PHP Parse error:  syntax error, unexpected $end in /home/photocha/public_html/includes/functions.php on line 447
+[09-Sep-2013 04:28:26] PHP Parse error:  syntax error, unexpected $end in /home/photocha/public_html/challenge.php on line 163
+[09-Sep-2013 04:29:52] PHP Parse error:  syntax error, unexpected $end in /home/photocha/public_html/challenge.php on line 24
+[09-Sep-2013 04:34:53] PHP Parse error:  syntax error, unexpected $end in /home/photocha/public_html/includes/functions.php on line 188
+[09-Sep-2013 04:41:09] PHP Parse error:  syntax error, unexpected $end in /home/photocha/public_html/includes/functions.php on line 542
+[09-Sep-2013 04:41:18] PHP Parse error:  syntax error, unexpected $end in /home/photocha/public_html/includes/functions.php on line 542
+[09-Sep-2013 04:57:06] PHP Parse error:  syntax error, unexpected $end in /home/photocha/public_html/browse.php on line 159
+[09-Sep-2013 04:57:24] PHP Warning:  Unexpected character in input:  ''' (ASCII=39) state=1 in /home/photocha/public_html/challenge.php on line 94
+[09-Sep-2013 04:57:24] PHP Parse error:  syntax error, unexpected $end, expecting ']' in /home/photocha/public_html/challenge.php on line 94
+[09-Sep-2013 05:00:13] PHP Warning:  preg_match() [<a href='function.preg-match'>function.preg-match</a>]: No ending delimiter '-' found in /home/photocha/public_html/browse.php on line 90
+[09-Sep-2013 05:00:13] PHP Warning:  preg_match() [<a href='function.preg-match'>function.preg-match</a>]: No ending delimiter '-' found in /home/photocha/public_html/browse.php on line 90
+[09-Sep-2013 05:00:13] PHP Warning:  preg_match() [<a href='function.preg-match'>function.preg-match</a>]: No ending delimiter '-' found in /home/photocha/public_html/browse.php on line 90
+[09-Sep-2013 05:00:13] PHP Warning:  preg_match() [<a href='function.preg-match'>function.preg-match</a>]: No ending delimiter '-' found in /home/photocha/public_html/browse.php on line 90
+[09-Sep-2013 05:00:13] PHP Warning:  preg_match() [<a href='function.preg-match'>function.preg-match</a>]: No ending delimiter '-' found in /home/photocha/public_html/browse.php on line 90
+[09-Sep-2013 05:00:13] PHP Warning:  preg_match() [<a href='function.preg-match'>function.preg-match</a>]: No ending delimiter '-' found in /home/photocha/public_html/browse.php on line 90
+[09-Sep-2013 05:00:13] PHP Warning:  preg_match() [<a href='function.preg-match'>function.preg-match</a>]: No ending delimiter '-' found in /home/photocha/public_html/browse.php on line 90
+[09-Sep-2013 05:00:13] PHP Warning:  preg_match() [<a href='function.preg-match'>function.preg-match</a>]: No ending delimiter '-' found in /home/photocha/public_html/browse.php on line 90
+[09-Sep-2013 05:00:13] PHP Warning:  preg_match() [<a href='function.preg-match'>function.preg-match</a>]: No ending delimiter '-' found in /home/photocha/public_html/browse.php on line 90
+[09-Sep-2013 05:00:13] PHP Warning:  preg_match() [<a href='function.preg-match'>function.preg-match</a>]: No ending delimiter '-' found in /home/photocha/public_html/browse.php on line 90
+[09-Sep-2013 05:00:13] PHP Warning:  preg_match() [<a href='function.preg-match'>function.preg-match</a>]: No ending delimiter '-' found in /home/photocha/public_html/browse.php on line 90
+[09-Sep-2013 05:00:13] PHP Warning:  preg_match() [<a href='function.preg-match'>function.preg-match</a>]: No ending delimiter '-' found in /home/photocha/public_html/browse.php on line 90
+[09-Sep-2013 05:00:13] PHP Warning:  preg_match() [<a href='function.preg-match'>function.preg-match</a>]: No ending delimiter '-' found in /home/photocha/public_html/browse.php on line 90
+[09-Sep-2013 05:00:13] PHP Warning:  preg_match() [<a href='function.preg-match'>function.preg-match</a>]: No ending delimiter '-' found in /home/photocha/public_html/browse.php on line 90
+[09-Sep-2013 05:00:13] PHP Warning:  preg_match() [<a href='function.preg-match'>function.preg-match</a>]: No ending delimiter '-' found in /home/photocha/public_html/browse.php on line 90
+[09-Sep-2013 05:05:02] PHP Parse error:  syntax error, unexpected $end in /home/photocha/public_html/challenge.php on line 169
+[09-Sep-2013 05:15:41] PHP Parse error:  syntax error, unexpected $end in /home/photocha/public_html/challenge.php on line 24
+[09-Sep-2013 22:52:29] PHP Warning:  Variable passed to each() is not an array or object in /home/photocha/public_html/apply.php on line 43
+[10-Sep-2013 01:13:49] PHP Fatal error:  Cannot use string offset as an array in /home/photocha/public_html/challenge.php on line 228
+[10-Sep-2013 01:25:07] PHP Parse error:  syntax error, unexpected ',', expecting T_VARIABLE or '$' in /home/photocha/public_html/apply.php on line 63
+[10-Sep-2013 02:25:47] PHP Warning:  Invalid argument supplied for foreach() in /home/photocha/public_html/apply.php on line 33
+[10-Sep-2013 02:27:14] PHP Warning:  Invalid argument supplied for foreach() in /home/photocha/public_html/apply.php on line 33
+[10-Sep-2013 02:28:58] PHP Warning:  Invalid argument supplied for foreach() in /home/photocha/public_html/apply.php on line 33
+[10-Sep-2013 03:46:32] PHP Warning:  copy(1 (4).jpg) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/photocha/public_html/apply.php on line 51
+[10-Sep-2013 03:46:32] PHP Warning:  chmod() [<a href='function.chmod'>function.chmod</a>]: No such file or directory in /home/photocha/public_html/apply.php on line 52
+[10-Sep-2013 03:46:32] PHP Warning:  copy(ass  (3).jpg) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/photocha/public_html/apply.php on line 51
+[10-Sep-2013 03:46:32] PHP Warning:  chmod() [<a href='function.chmod'>function.chmod</a>]: No such file or directory in /home/photocha/public_html/apply.php on line 52
+[10-Sep-2013 03:51:16] PHP Warning:  copy(1 (4).jpg) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/photocha/public_html/apply.php on line 84
+[10-Sep-2013 03:51:16] PHP Warning:  chmod() [<a href='function.chmod'>function.chmod</a>]: No such file or directory in /home/photocha/public_html/apply.php on line 85
+[10-Sep-2013 03:51:17] PHP Warning:  copy(ass  (3).jpg) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/photocha/public_html/apply.php on line 84
+[10-Sep-2013 03:51:17] PHP Warning:  chmod() [<a href='function.chmod'>function.chmod</a>]: No such file or directory in /home/photocha/public_html/apply.php on line 85
+[10-Sep-2013 04:10:35] PHP Warning:  copy(1.jpg) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/photocha/public_html/apply.php on line 84
+[10-Sep-2013 04:10:35] PHP Warning:  copy(ass .jpg) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/photocha/public_html/apply.php on line 84
+[10-Sep-2013 04:21:39] PHP Parse error:  syntax error, unexpected ';' in /home/photocha/public_html/apply.php on line 70
+[10-Sep-2013 04:22:17] PHP Parse error:  syntax error, unexpected '}' in /home/photocha/public_html/apply.php on line 112
+[10-Sep-2013 04:58:58] PHP Warning:  Invalid argument supplied for foreach() in /home/photocha/public_html/apply.php on line 69
+[11-Sep-2013 01:42:36] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/photocha/public_html/includes/functions.php on line 570
+[11-Sep-2013 02:25:39] PHP Parse error:  syntax error, unexpected $end in /home/photocha/public_html/includes/functions.php on line 373
+[11-Sep-2013 02:25:55] PHP Fatal error:  Cannot use string offset as an array in /home/photocha/public_html/challenge.php on line 227
+[11-Sep-2013 02:25:57] PHP Fatal error:  Cannot use string offset as an array in /home/photocha/public_html/challenge.php on line 227
+[11-Sep-2013 04:07:41] PHP Fatal error:  Cannot use string offset as an array in /home/photocha/public_html/challenge.php on line 222
+[11-Sep-2013 04:07:42] PHP Fatal error:  Cannot use string offset as an array in /home/photocha/public_html/challenge.php on line 222
+[11-Sep-2013 04:23:51] PHP Parse error:  syntax error, unexpected $end, expecting ',' or ';' in /home/photocha/public_html/challenge.php on line 216
+[11-Sep-2013 04:37:56] PHP Fatal error:  Cannot use string offset as an array in /home/photocha/public_html/challenge.php on line 227
+[11-Sep-2013 04:38:02] PHP Fatal error:  Cannot use string offset as an array in /home/photocha/public_html/challenge.php on line 227
+[11-Sep-2013 20:30:52] PHP Parse error:  syntax error, unexpected T_ELSE in /home/photocha/public_html/index.php on line 9
+[11-Sep-2013 20:31:47] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/photocha/public_html/index.php:2) in /home/photocha/public_html/header_index.php on line 3
+[11-Sep-2013 20:32:35] PHP Fatal error:  Cannot use string offset as an array in /home/photocha/public_html/sponsorship_table.php on line 40
+[11-Sep-2013 20:34:36] PHP Parse error:  syntax error, unexpected T_ELSE in /home/photocha/public_html/index.php on line 10
+[11-Sep-2013 20:38:59] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/photocha/public_html/index.php:5) in /home/photocha/public_html/header_index.php on line 3
+[11-Sep-2013 20:39:48] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/photocha/public_html/index.php:5) in /home/photocha/public_html/header_index.php on line 3
+[11-Sep-2013 20:40:34] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/photocha/public_html/index.php:6) in /home/photocha/public_html/header_index.php on line 3
+[11-Sep-2013 21:59:49] PHP Parse error:  syntax error, unexpected $end in /home/photocha/public_html/index.php on line 12
+[11-Sep-2013 22:02:19] PHP Parse error:  syntax error, unexpected $end in /home/photocha/public_html/index.php on line 13
+[11-Sep-2013 22:07:08] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/photocha/public_html/index.php:2) in /home/photocha/public_html/header_index.php on line 3
+[11-Sep-2013 22:11:01] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/photocha/public_html/index.php:2) in /home/photocha/public_html/header_index.php on line 3
+[12-Sep-2013 20:56:11] PHP Fatal error:  Cannot use string offset as an array in /home/photocha/public_html/challenge.php on line 249
+[12-Sep-2013 20:56:13] PHP Fatal error:  Cannot use string offset as an array in /home/photocha/public_html/challenge.php on line 249
+[12-Sep-2013 21:20:46] PHP Warning:  Invalid argument supplied for foreach() in /home/photocha/public_html/apply.php on line 57
+[13-Sep-2013 01:20:16] PHP Fatal error:  Class 'DIR_LIB' not found in /home/photocha/public_html/header.php on line 4
+[13-Sep-2013 01:21:07] PHP Warning:  Invalid argument supplied for foreach() in /home/photocha/public_html/apply.php on line 57
+[13-Sep-2013 01:23:48] PHP Warning:  Invalid argument supplied for foreach() in /home/photocha/public_html/apply.php on line 57
+[13-Sep-2013 01:27:52] PHP Warning:  Invalid argument supplied for foreach() in /home/photocha/public_html/apply.php on line 57
+[13-Sep-2013 01:40:11] PHP Warning:  Invalid argument supplied for foreach() in /home/photocha/public_html/apply.php on line 57

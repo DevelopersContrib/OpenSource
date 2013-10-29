@@ -1,0 +1,134 @@
+body {
+	/*background:rgb(104, 0, 0); */
+}
+
+
+
+#header-wrap {
+	border-bottom: 3px solid rgb(168, 0, 0) !important; 
+}
+
+.wrap-ttle-blue {
+    background: none repeat scroll 0px 0px rgb(104, 0, 0) !important;
+}
+.wrap-ttle-blue .page-header{
+	border:none;
+	color: #fff;
+}
+.wrap-ttle-blue .page-header h1{
+	line-height:1.2em;
+	font-size: 3em;
+	text-rendering: optimizelegibility;
+}
+.wrap-ttle-blue .page-header h2 {
+    color: rgba(255, 255, 255, 0.6);
+    font-style: normal;
+    font-size: 1.375em;
+	line-height: 1.3em;
+    margin: 0.4em 0 1em;
+}
+
+.post-title{
+	color: #A20000 !important;
+}
+
+.post-title:hover{
+	color: color: #A20000 !important;
+	opacity:0.7;
+}
+
+.page-header h1{
+	color: white;
+}
+
+.mrgn-brdcrmp{
+	color:white;
+}
+
+.brdcrmp-style{
+	color:white;
+}
+
+.challenge-ttle h2 {
+	color: #910303 !important;
+}
+
+.challenge-listing a:hover {
+	border: 6px solid #910303 !important;
+}
+
+.wrap-box-feature a{
+	color: #910303;
+}
+
+.sign-up-bckgrnd {
+	background: none repeat scroll 0 0 rgb(104, 0, 0) !important;
+}
+
+.wrap-main-content .page-header h2 {
+	color: #910303 !important;
+}
+
+.left-content-title {
+	color: #3F3F3F !important;
+}
+
+.dashboard-header-ttle {
+	color: #3F3F3F !important;
+}
+
+a.sub-app-link{
+	color: #A20000 !important;
+}
+a.sub-app-link:hover{
+	color: #A20000 !important;
+	opacity:0.7;
+}
+
+.application-listing .wrap-listing{
+	background: rgb(248, 248, 248) !important;
+}
+
+.application-listing .wrap-listing:hover {
+	border: 6px solid #AA0E0E !important;
+}
+
+.post-left-content h2, .wrap-post-right-content h2 {
+	color: #3F3F3F !important;
+}
+
+		.text-warning {
+		  color: #c09853 !important;
+		}
+
+		a.text-warning:hover,
+		a.text-warning:focus {
+		  color: #a47e3c !important;
+		}
+
+		.text-error {
+		  color: #b94a48 !important;
+		}
+
+		a.text-error:hover,
+		a.text-error:focus  {
+		  color: #953b39 !important;
+		}
+
+		.text-info {
+		  color: #3a87ad !important;
+		}
+
+		a.text-info:hover,
+		a.text-info:focus {
+		  color: #2d6987 !important;
+		}
+
+		.text-success {
+		  color: #468847 !important;
+		}
+
+		a.text-success:hover,
+		a.text-success:focus {
+		  color: #356635 !important;
+		}

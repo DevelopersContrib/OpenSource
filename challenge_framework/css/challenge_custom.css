@@ -1,0 +1,226 @@
+body{
+	background-color: #dddddd !important;
+}
+.wrap-header-post{
+	padding: 5px;
+	margin-bottom: 5px;
+}
+.post-title{
+	text-transform: uppercase;
+	font-size: 30px;
+	line-height: 1.2em;
+	font-family: "proxima-nova-n4","proxima-nova","Helvetica Neue",Arial,sans-serif;
+	color: #08adbd;
+}
+.post-title:hover{
+	text-decoration: none;
+	color: #08adbd;
+}
+#challenge-strip {
+    color: #262727;
+}
+.strip {
+    display: block;
+    float: left;
+}
+/*	First
+-------------------*/
+.strip li.first {
+    background-position: 0 -1px;
+    padding-left: 10px;
+    padding-right: 0;
+}
+.strip li.first, .strip li.last {
+    background-image: url("../img/strip-borders.png");
+    background-repeat: no-repeat;
+}
+.strip li {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #CCCCCC;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px 0;
+    display: block;
+    float: left;
+}
+.strip-elements-wrapper .strip-element-wrapper {
+    font-family: helvetica,arial,sans-serif;
+    font-size: 14px;
+    line-height: 23px;
+}
+.strip .strip-element-wrapper {
+    background-color: #FFFFFF;
+    display: block;
+    height: 20px;
+    padding: 2px 14px 6px;
+}
+.current-challenge-status {
+    font-size: 14px;
+}
+.strip-icons #s-days .ico {
+    background-position: 0 -17px;
+}
+.strip-icons .ico {
+    background-color: #FFB41D !important;
+}
+.strip-icons .ico {
+    background-color: #98DDFF;
+    background-image: url("../img/strip-icons.png");
+    background-repeat: no-repeat;
+    display: block;
+    float: left;
+    height: 17px;
+    margin-right: 8px;
+    margin-top: 3px;
+    width: 19px;
+}
+.strip-elements-wrapper strong {
+    font-family: helvetica,arial,sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+/*	Last
+--------------------------------*/
+.strip li.last {
+    background-position: 100% -31px;
+    padding-left: 0;
+    padding-right: 10px;
+}
+.strip li.first, .strip li.last {
+    background-image: url("../img/strip-borders.png");
+    background-repeat: no-repeat;
+}
+.strip li {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #CCCCCC;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px 0;
+    display: block;
+    float: left;
+}
+.last {
+    margin-right: 0;
+}
+.current-challenge-status .view-all-dates-link {
+    font-size: 12px;
+}
+.current-challenge-status .view-all-dates-link:hover {
+	text-decoration: none;
+}
+/* wrap-header-bckgrnd
+----------------------------*/
+.wrap-header-bckgrnd{
+	min-height: 100px;
+	background-position: right bottom;
+    background-repeat: no-repeat;
+	padding: 19px 32px;
+}
+#header .header-content {
+    height: 186px;
+    width: 725px;
+}
+#header h1{
+    color: #FFFFFF;
+    font-family: helvetica,arial,sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 0.01em;
+    margin-bottom: 24px;
+	font-style: normal;
+}
+/* post body content
+-------------------------------------*/
+.wrap-post-content{
+	background-color: #fff;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+}
+.post-body-content{
+	border-right: 3px solid #EBEBEB;
+	padding-right: 15px;
+	padding-left: 10px;
+}
+.padding-content{
+	padding: 15px 0 15px;
+}
+.post-left-content{
+	margin:10px;
+}
+.post-right-content{
+	margin:10px;
+}
+.post-left-content h2{
+	border-bottom: 1px solid #DDDDDD;
+    color: #262727;
+    font-family: helvetica,arial,sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: 0.02em;
+    line-height: 110%;
+    margin-bottom: 14px;
+    padding-bottom: 2px;
+    text-transform: none;
+}
+#timeline li{
+	margin-right: 5px;
+	width:172px;
+	text-align: center;
+}
+ul#timeline li:nth-child(1), ul#timeline li:nth-child(2){
+	border-right:1px solid #E6E6E6;
+}
+.timeline-ttle{
+	font-size: 13px;
+	line-height: 18px;
+}
+.timeline-p{
+	line-height: 15px;
+	margin-bottom: 12px;
+	font-size: 13px;
+}
+.wrap-post-main-content{
+	margin-bottom:25px;
+}
+.jbox-info {
+    font-size: 12px;
+    line-height: 15px;
+    min-height: 40px;
+    padding: 10px;
+    vertical-align: middle;
+}
+span.rank {
+    background: none repeat scroll 0 0 #333333;
+    border: 1px solid #CCCCCC;
+    border-radius: 25px 25px 25px 25px;
+    color: #FFFFCC;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-top: -2px;
+    padding: 15px;
+    text-align: center;
+    width: 15px;
+}
+.jbox-p{
+	display: inline-block;
+}
+div.profile-row img {
+    border: 3px solid #EEEEEE;
+}
+.jbox-price {
+    background-image: url("../img/prize_ico.gif");
+    background-repeat: no-repeat;
+    font-size: 12px;
+    height: 65px;
+    line-height: 16px;
+    padding-left: 70px;
+}

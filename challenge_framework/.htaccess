@@ -1,0 +1,15 @@
+RewriteEngine on
+RewriteRule ^(.*)\.html$ $1.php [nc]
+RewriteRule ^challenge/([A-Za-z0-9-()]+)\/?$ challenge.php?slug=$1
+RewriteRule ^challenge/applications/([A-Za-z0-9-()]+)\/?$ applications.php?slug=$1
+RewriteRule ^challenge/apply/([A-Za-z0-9-()]+)\/?$ apply.php?slug=$1
+RewriteRule ^challenge/edit/([A-Za-z0-9-()]+)\/?$ edit_challenge.php?slug=$1
+RewriteRule ^challenge/sponsor/([A-Za-z0-9-()]+)\/?$ sponsor_challenge.php?slug=$1
+RewriteRule ^application/([A-Za-z0-9-()]+)\/?$ application.php?slug=$1
+RewriteRule ^application/winner/([A-Za-z0-9-()]+)\/?$ approve_winner.php?slug=$1
+RewriteRule ^user/([A-Za-z0-9-()]+)\/?$ profile.php?username=$1
+RewriteRule ^badges/challenge/([0-9]*)\/?$ widget/challenge.php?challenge_id=$1
+RewriteRule ^badges/([A-Za-z0-9-()]+)\/?$ badges.php?slug=$1
+RewriteRule ^discuss/([A-Za-z0-9-()]+)\/?$ discuss.php?slug=$1
+RewriteRule ^sponsor/edit/([A-Za-z0-9-()]+)/([0-9]*)\/?$ sponsor_challenge_edit.php?slug=$1&sponsor_id=$2                                                                       
+RewriteRule ^application/edit/([A-Za-z0-9-()]+)\/?$ application_edit.php?slug=$1                                                                       

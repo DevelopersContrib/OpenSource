@@ -1,0 +1,120 @@
+/*.wrap-ttle-blue {
+    background: none repeat scroll 0 0 #108AC7 !important;
+}*/
+.wrap-user-profile{
+	padding: 35px 32px 55px;
+}
+#user-avatar{
+	display: inline-block;
+	float: left;
+}
+#user-avatar img {
+    border: 5px solid white;
+    box-shadow: 0 0 6px black;
+    display: block;
+    max-height: 180px;
+	min-width: 180px;
+	max-width: 180px;
+}
+.image-replacement {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0 none;
+    color: rgba(0, 0, 0, 0);
+    font: 0px/0 a;
+    text-shadow: none;
+}
+.col.user-info {
+    margin-right: 0;
+}
+.three {
+    width: 664px;
+	margin-left: 30px;
+}
+.col {
+    float: left;
+    margin-right: 32px;
+	display: inline-block;
+}
+.user-name {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.user-name {
+    color: #fff;
+    font-size: 2.975em;
+    margin-top: 15px;
+    text-transform: uppercase;
+	margin-bottom: 10px;
+}
+.wrap-user-content{
+	border-right:1px solid #ccc;
+	border-left:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	margin-bottom: 20px;
+}
+.wrap-main-content{
+	margin:20px;
+}
+.wrap-main-content .page-header h2{
+	color: #108AC7;
+}
+.wrap-brdr-white{
+	background-color:#fff;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+}
+/* ribbong for statistic*/
+.stat-graph-1{
+	background:url("../img/stat-graph-1.png") no-repeat scroll right center transparent;
+}
+.stat-graph-2{
+	background:url("../img/stat-graph-2.png") no-repeat scroll right center transparent;
+}
+
+.stat-graph-1 span.sub-stat-title {
+	color: #3a87ad ;
+	border-right: 1px solid #51BFEA;
+}
+
+.stat-graph-2 span.sub-stat-title {
+	color: #c09853;
+	border-right: 1px solid #E6B869;
+}
+
+.stat-graph-2 span.sub-stat-result a {
+	color: #c09853 ;
+}
+
+.sub-stat{
+	float:left;
+	margin:0 0 10px 0;
+	clear:both;
+	width:auto;
+	height:42px;
+	padding:2px 30px 0 10px;
+	color:#fff;
+}
+span.sub-stat-title { 
+	display:inline-block;
+	float:left; 
+	font-weight:bold; 
+	width:75px;
+	padding:3px 20px 0 0; 
+	text-align:left; 
+	font-size:13px;
+	margin:0;
+	line-height: 15px;
+	height:32px;
+}
+span.sub-stat-result{
+	color: #000;
+	display: inline-block;
+	float: left;
+	font-size: 20px;
+	padding: 7px 10px 0 20px;
+}
+span.sub-stat-result a:hover{
+	text-decoration:none;
+	font-weight:bold;
+}
+

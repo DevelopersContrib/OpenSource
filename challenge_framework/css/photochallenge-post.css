@@ -1,0 +1,272 @@
+
+.wrap-header-post{
+	width:100%;
+	padding: 5px;
+	margin-bottom: 5px;
+}
+.post-title{
+	text-transform: uppercase;
+	font-size: 30px;
+	line-height: 1.2em;
+	font-family: "proxima-nova-n4","proxima-nova","Helvetica Neue",Arial,sans-serif;
+}
+.post-title:hover{
+	text-decoration: none;
+	color: #08ADBD;
+}
+/* wrap-header-bckgrnd
+----------------------------*/
+.wrap-header-bckgrnd{
+	background-color: #262727;
+	min-height: 100px;
+	background-position: right bottom;
+    background-repeat: no-repeat;
+	background-image: url("../img/header.gif");
+	padding: 19px 32px;
+}
+#header .header-content {
+    height: 186px;
+    width: 725px;
+}
+#header h1{
+    color: #FFFFFF;
+    font-family: helvetica,arial,sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 0.01em;
+    margin-bottom: 24px;
+	font-style: normal;
+}
+/* post body content
+-------------------------------------*/
+.wrap-post-content{
+	background-color: #fff;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	border-left: 1px solid #CCCCCC;
+	border-right: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+}
+.post-body-content{
+	border-right: 3px solid #EBEBEB;
+	padding-right: 15px;
+	padding-left: 10px;
+}
+.padding-content{
+	padding: 15px 0 15px;
+}
+.post-left-content{
+	margin:10px;
+}
+.post-right-content{
+	margin-right:15px;
+}
+
+/* post-h2-ttle 
+-----------------------------------*/
+.post-left-content h2, .wrap-post-right-content h2{
+	border-bottom: 1px solid #DDDDDD;
+    color: #666666;
+    font-family: helvetica,arial,sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: 0.02em;
+    line-height: 110%;
+    margin-bottom: 14px;
+    padding-bottom: 2px;
+    text-transform: none;
+}
+#timeline li{
+	margin-right: 5px;
+	width:30%;
+	text-align: center;
+}
+ul#timeline li:nth-child(1), ul#timeline li:nth-child(2){
+	border-right:1px solid #E6E6E6;
+}
+.timeline-ttle{
+	font-size: 13px;
+	line-height: 18px;
+}
+.timeline-p{
+	line-height: 15px;
+	margin-bottom: 12px;
+	font-size: 13px;
+}
+.wrap-post-main-content{
+	margin-bottom:25px;
+}
+.jbox-info {
+    font-size: 12px;
+    line-height: 15px;
+    min-height: 40px;
+    padding: 10px;
+    vertical-align: middle;
+}
+span.rank {
+	background: none repeat scroll 0 0 #333333;
+	border: 1px solid #CCCCCC;
+	border-radius: 25px 25px 25px 25px;
+	color: white;
+	display: inline-block;
+	font-size: 15px;
+	font-weight: bold;
+	margin: 10px 10px 0 0;
+	padding: 5px 7px;
+	text-align: center;
+	width: 15px;
+}
+.jbox-p{
+	display: inline-block;
+}
+div.profile-row img {
+    border: 3px solid #EEEEEE;
+	height: 50px;
+    width: 50px;
+}
+.jbox-price {
+    background-image: url("../img/prize_ico.gif");
+    background-repeat: no-repeat;
+    font-size: 12px;
+    height: 65px;
+    line-height: 16px;
+    padding-left: 70px;
+}
+.browse , .browse:hover{
+	text-decoration: none;
+	cursor: pointer;
+}
+ul#latest-challnger li{
+	margin-bottom:10px;
+}
+/* Ribbon
+----------------------------------------------*/
+.trtri { background: #d45f00; }
+h1.trtri span { float: right; }
+.trtri:before {
+  content: '';
+  position: absolute;
+  height: 0;
+  width: 0;
+}
+.trtri:before {
+  bottom: 100%;
+  right: 0px;
+  border-bottom: 10px solid #994400;
+  border-right: 10px solid transparent;
+}
+h1.trtri {
+  position: relative;
+  background: #bd0000;
+  padding: 5px 10px;
+  color: #fff;
+  text-align: left;
+  right: -10px;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+}
+h1.trtri a{
+	text-decoration: none;
+	cursor: pointer;
+	font-style: normal;
+	color: #ffd200;
+	font-size: 12px;
+}
+h1.trtri a:hover{
+	color: #dfb800;
+}
+/* Style for submit application
+------------------------------------------------------*/
+.application-listing .wrap-listing{
+	background: none repeat scroll 0 0 #fff;
+    border: 6px solid #fafafa;
+    color: #707070;
+    display: block;
+    margin-bottom: 1em;
+    padding: 0.5em 0.875em 0.875em;
+}
+.application-listing .wrap-listing:hover{
+	border: 6px solid #1194d5;
+	box-shadow: 0 0 4px 1px rgba(0,0,0,0.4);
+	transition: all 0.2s ease 0s;
+}
+.application-ttle {
+    padding: 0 10px 5px;
+}
+.sub-app-link , .sub-app-link:hover{
+	color: #108AC7 !important;
+    font-size: 1.375em !important;
+    font-style: normal !important;
+    margin: 0 0 0.2em !important;
+    transition: all 0.2s ease 0s !important;
+	border: none !important;
+}
+.sub-app-img:hover{
+	text-decoration:none;
+}
+.sub-app-by{
+	color: #969696;
+    font-style: italic;
+    margin: 0 0 0.3em;
+	text-transform: capitalize;
+}
+/* dashboard header title style
+------------------------------------------------------*/
+.dashboard-header-ttle{
+	color: #108AC7;     
+	font-family: helvetica,arial,sans-serif;     
+	font-size: 24px;     
+	font-style: normal;     
+	font-weight: bold;     
+	letter-spacing: 0.02em;
+}
+/* wrap-ribbon-solved
+-------------------------------------------------*/
+.wrap-ribbon-solved{
+	width:150px;
+	margin-top: 3px;
+}
+.wrap-text-solved{
+	position: absolute;
+}
+.p-solved{
+	color:#47c053;
+	padding-left: 50px;
+	padding-top: 2px;
+	font-weight: bold; 
+	text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.25);
+}
+/* Tabs style for post challenge and submit
+-------------------------------------------*/
+ul#post-tabs{
+	margin:0 !important;
+}
+/*-----active tab------*/
+ul#post-tabs li.active-tab{
+	border-radius: 4px 4px 0 0;
+	background-image: -moz-linear-gradient(center top , #262727, #262727);
+	background-color: #262727;
+}
+ul#post-tabs li.active-tab .tab-link .tabs-text, ul#post-tabs li.inactive-tab .tab-link .tabs-text{
+	color: #fff;
+	text-transform: capitalize;
+	font-weight: bold;
+	font-size: 12px;
+	padding: 5px;
+}
+ul#post-tabs li.active-tab .tab-link:hover, ul#post-tabs li.active-tab .tab-link:focus, 
+ul#post-tabs li.inactive-tab .tab-link:hover, ul#post-tabs li.inactive-tab .tab-link:focus{
+	text-decoration:none;
+}
+/*--------inactive tab-----*/
+ul#post-tabs li.inactive-tab{
+	border-radius: 4px 4px 0 0;
+	background-color: rgb(94, 94, 94);
+	background-image: -moz-linear-gradient(center top , #009199, #009199);
+}
+ul#post-tabs li.inactive-tab:hover{
+	background-color: #262727;
+	background-image: -moz-linear-gradient(center top , #ee2e24, #ee2e24);
+}

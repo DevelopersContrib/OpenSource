@@ -1,0 +1,244 @@
+body{
+	padding: 0 !important;
+}
+.header-bckgrnd{
+	background: none repeat scroll 0 0 white;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+}
+.logo-photochallenge{
+	padding:10px 5px;
+  height:60px;
+}
+/*.wrap-ttle-blue{
+	background: none repeat scroll 0 0 #108AC7 !important;
+}*/
+.wrap-ttle-blue .page-header{
+	border:none;
+	color: #fff;
+}
+.wrap-ttle-blue .page-header h1{
+	line-height:1.2em;
+	font-size: 3em;
+	text-rendering: optimizelegibility;
+}
+.wrap-ttle-blue .page-header h2 {
+    color: rgba(255, 255, 255, 0.6);
+    font-style: normal;
+    font-size: 1.375em;
+	line-height: 1.3em;
+    margin: 0.4em 0 1em;
+}
+#third-sec h2 img{
+	margin: -6px 10px 0 0;
+}
+#third-sec h2 span{
+	padding: 4px 0 0;
+}
+.wrap-box-feature{
+	border: 1px solid #ccc;
+	height: 100%;
+	box-shadow:0 0 5px #ccc;
+	border-radius: 5px;
+	min-height: 160px;
+	max-height: 185px;
+}
+.wrap-box-feature:hover{
+	box-shadow:0 0 5px #ababab;
+}
+.wrap-box-feature p{
+	margin: 10px 0 10px;
+}
+.wrap-box-feature p .brwse-challenge{
+	font-size: 18px;
+	font-weight: bold;
+	letter-spacing: 0.1em;
+}
+.wrap-box-feature p a:hover{
+	text-decoration:none;
+}
+.featured-challenge-bckgrnd{
+	background-color: #EFEFEF;
+	margin-top: 20px;
+}
+.section-title{
+	border-top: 3px solid #E0E0E0;
+    color: #969696;
+    font-size: 18px;
+    letter-spacing: 3px;
+    margin: 40px auto;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+.section-title span {
+    background: none repeat scroll 0 0 #EFEFEF;
+    display: inline-block;
+    padding: 0 1em;
+    position: relative;
+    top: -1.25em;
+}
+.section-title .t2 {
+    background: none repeat scroll 0 0 #fff;
+    display: inline-block;
+    padding: 0 1em;
+    position: relative;
+    top: -1.25em;
+}
+.challenge-listing{
+	text-align:left;
+}
+.challenge-listing a {
+    background: none repeat scroll 0 0 white;
+    border: 6px solid white;
+    color: #707070;
+    display: block;
+    margin-bottom: 1em;
+    padding: 0.5em 0.875em 0.875em;
+}
+.challenge-listing a:hover{
+	border: 6px solid #1194d5;
+	box-shadow: 0 0 4px 1px rgba(0,0,0,0.4);
+	transition: all 0.2s ease 0s;
+}
+.brdr-rgt-list{
+	border-right: 2px dotted #E2E2E2;
+}
+.challenge-logo {
+    float: left;
+}
+.challenge-ttle{
+	padding: 0 10px 5px 10px;
+}
+.challenge-ttle h2 {
+    color: #108AC7;
+    margin: 0 0 0.2em;
+    transition: all 0.2s ease 0s;
+	font-size: 1.375em;
+    font-style: normal;
+}
+.posted-by{
+	color: #969696;
+    font-style: italic;
+    margin: 0 0 0.3em;
+}
+p.challenge-description {
+    margin: 0;
+}
+.value {
+    color: #171717;
+    font-size: 1.125em;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.3em;
+    text-rendering: optimizelegibility;
+	margin-left: 15px;
+	letter-spacing: 0.0833333em;
+}
+.action {
+    color: #969696;
+    display: block;
+    font-size: 0.75em;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0.0833333em;
+    line-height: 1.5em;
+    text-transform: uppercase;
+	margin-left: 15px;
+}
+.sign-up-bckgrnd{
+	background-color: #FCCB45;
+}
+.sign-up-ttle{
+	color: #171717;
+    font-size: 1.375em;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.3em;
+    text-rendering: optimizelegibility;
+	padding-top: 17px;
+}
+.footer-bckgrnd{
+	background-color: #333;
+}
+.wrap-site-map{
+	margin:20px 0 20px;
+}
+.site-map{
+	margin-bottom: 0.25em;
+}
+.site-map a {
+    color: #ADADAD;
+    font-size: 0.875em;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0.142857em;
+    line-height: 0.875em;
+    margin-right: 1.75em;
+    text-transform: uppercase;
+}
+.site-map a:hover{
+	color: #fff;
+	text-decoration: none;
+}
+a{
+	transition: all 0.2s ease 0s;
+}
+.legal{
+	color: #707070;
+}
+.legal a{
+	color: #707070;
+	text-decoration: none;
+	display: inline-block;
+	margin-right: 2em;
+}
+.legal a:hover{
+	color: #fff;
+	text-decoration: none;
+}
+.copyright {
+    margin-right: 2em;
+	display: inline-block;
+}
+/* mobile Phones to tablets
+----------------------------------------------------------*/
+@media (max-width: 767px) { 
+	.wrap-box-feature{
+		border: 1px solid #ccc;
+		height: 100%;
+		box-shadow:0 0 5px #ccc;
+		border-radius: 5px;
+		min-height: 200px;
+		max-height: 205px;
+		width: 300px;
+		margin: 0 auto;
+	}
+	.site-map{
+	margin-bottom: 0.25em;
+	margin-left: 10px;
+	}
+	.legal {
+    color: #707070;
+	margin-left: 10px;
+	}
+}
+@media (max-width: 480px) { 
+	.wrap-box-feature{
+		border: 1px solid #ccc;
+		height: 100%;
+		box-shadow:0 0 5px #ccc;
+		border-radius: 5px;
+		min-height: 200px;
+		max-height: 205px;
+		width: 300px;
+		margin: 0 auto;
+	}
+	.site-map{
+	margin-bottom: 0.25em;
+	margin-left: 10px;
+	}
+	.legal {
+    color: #707070;
+	margin-left: 10px;
+	}
+}

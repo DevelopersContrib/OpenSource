@@ -1,0 +1,190 @@
+
+.bckgrnd-header{
+	background:url(../images/header-top-strip.png) repeat-x top #fff;
+	border-bottom: 5px solid #B7D7EF;
+}
+.wrap-content{
+	background-color: #fff;border-radius:10px;min-height: 400px;margin: 30px 0 30px 0;padding: 20px;
+}
+.wrap-left-content{
+	margin-bottom:5px;background: none repeat scroll 0 0 #DFDFDF;border-radius: 10px;min-height: 100px;padding: 10px;
+}
+.left-content-title{
+	font-weight:bold;text-transform: uppercase; font-size: 20px;color: #404040;background: #eee;
+padding-left: 6px;
+border-radius: 5px;  margin-top: 2px;
+}
+.left-img{
+	border: 4px solid #333333;border-radius:5px;
+}
+.left-img-cptn{
+	background-color: #000;height: 75px;padding: 2px;font-size:9px; 
+}
+.left-img-cptn a{color:#fafafa;font-size:15px;}
+.left-img-cptn p.entryp{color: #ccc;text-transform:uppercase;}
+.left-img-cptn p.entryp a{color: #ccc !important;text-transform:uppercase;font-size:9px;}
+
+.wrap-side-content{
+	margin-bottom:5px;border-left: 1px solid rgb(231, 231, 231);padding: 15px;
+}
+.side-cntnt-title, .side-cntnt-title:hover{
+	font-size: 16px;text-decoration: none;text-transform: uppercase;
+}
+.side-cntnt-desc{
+	margin-top: 5px;font-size: 13px;
+}
+.side-meta-title{
+	font-size: 16px;text-decoration: none;text-transform: uppercase;font-weight: bold;color:#0f5c92;
+}
+.side-meta-sponsor{
+	font-size: 16px;text-decoration: none;text-transform: uppercase;font-weight: bold;color:#0f5c92;
+}
+.left-usrprfl-img img{
+	width: 95%;
+}
+.brdcrmb-link-deco,.brdcrmb-link-deco:hover{
+	text-decoration: none;
+}
+.brdcrmb-meta-arrw{
+	color: #CCCCCC;
+}
+.brdcrmb-active{
+	color: #999999;
+}
+.ch-nav{
+	display: inline;padding:5px;margin:0 3px 0 0; border: 1px solid #ccc; background-color: #EFEFEF;
+}
+.join-ch-ttleclr{
+	color: #0A7FD1;
+}
+.ch-bckgrnd{
+	background: none repeat scroll 0 0 #404040; padding: 20px;border-bottom: 10px solid #333333;
+}
+.ch-ttl-hdr{
+	text-transform: capitalize;color: #fff;	
+  font-size:25px;line-height:auto;
+}
+.ch-ttl-desc{
+	text-align: justify;font-weight: normal;color: #fff;
+}
+.side-wrap-brdr{
+	border-left: 1px solid #ccc;padding: 20px;
+}
+.hdr-title-clr{
+	color: #0A7FD1;
+}
+.ch-error{
+	background: none repeat scroll 0 0 #FFFF99;border: 1px solid #FF0033;color: #CC0000;font-size: 12px;font-weight: bold;line-height: 20px;margin: 5px;padding: 5px;width: auto;
+}
+.ch-info{
+	background: none repeat scroll 0 0 #FFFF99;border: 1px solid green;color: green;font-size: 12px;font-weight: bold;line-height: 20px;margin: 5px;padding: 5px;width: auto;
+}
+.ch-user-name{
+	color: #0A7FD1;padding: 0;margin: 0;text-transform: capitalize;
+}
+.ch-meta-challenger{
+	text-transform: uppercase;color: #22b573;font-weight: bold;
+}
+/*notifications*/
+.message-error {background:#F2BBA0; height: 32px; width:100%; float:left; margin:0 0 5px 0; clear:both; color:#333; font-weight:bold;}
+.message-error span{ display:block; height: 25px; padding: 10px 10px 6px 35px; background:url(../img/icons/mes-error.png) no-repeat 8px 8px;}
+.message-success {background:#CEE790; height: 32px; width:100%; float:left; margin:0 0 5px 0; clear:both; color:#333; font-weight:bold;}
+.message-success span{ display:block; height: 25px; padding: 10px 10px 6px 35px; background:url(../img/icons/mes-success.png) no-repeat 8px 8px;}
+.message-warning {background:#F9EDAA; height: 32px; width:100%; float:left; margin:0 0 5px 0; clear:both; color:#333; font-weight:bold;}
+.message-warning span{ display:block; height: 25px; padding: 10px 10px 6px 35px; background:url(../img/icons/mes-warning.png) no-repeat 8px 8px;}
+.message-info {background:#DAEFFB;  height: 32px; width:100%; float:left; margin:0 0 5px 0; clear:both; color:#333; font-weight:bold;}
+.message-info span{ display:block; height: 25px; padding: 10px 10px 6px 35px; background:url(../img/icons/mes-info.png) no-repeat 8px 8px;}
+/*challenge detail page*/
+.jbox_price {
+	background-image:url('http://mychallenge.com/images/prize_ico.gif');
+	background-repeat:no-repeat;
+	height:65px;
+	line-height:16px;
+	font-size:12px;
+	padding-left:70px;
+	margin-botton:5px;	
+}
+.jbox_info { font:Arial, sans-serif; font-size:12px; line-height:15px;
+	font-smoothing:always; min-height:40px; vertical-align:middle; padding:10px 10px;
+}
+span.rank { 
+	display: inline-block; 
+float: left;
+padding: 15px;
+background: #333;
+width: 15px;
+font-size: 15px;
+font-weight: bold;
+margin-right: 10px;
+margin-top: -2px;
+color: #ffffcc;
+border-radius: 25px;
+-moz-border-radius: 30px;
+-webkit-border-radius: 30px;
+-khtml-border-radius: 30px;
+text-align: center;
+border: 1px solid #ccc;
+}
+/* header menu*/
+div#menu-username{cursor: pointer;}
+div#menu-username span img{position: relative;top: 10px;width: 25px;height: 25px;border: 1px solid #CCCCCC;}
+ul#menu-username-hover{position: relative;
+z-index: 500;
+margin-bottom: -62px;
+text-align: left;
+margin-left: 33px;
+margin-top: 2px;
+display: block;
+border: 1px solid #ccc;
+padding: 5px;
+background: #fafafa;
+border-radius: 5px;}
+ul#menu-username-hover li {display: block;}
+ul#menu-username-hover li a:hover{color:#000;}
+div.profile-row {margin: 0;padding: 0;margin:0 1px 1px 0px}
+div.profile-row img{height:50px;width:80px;border:3px solid #eee;}
+/* STYLE for pages
+------------------------------------------------------*/
+.page-header-title{
+	font: 900 21px/40px 'museo-sans-n9','museo-sans',Arial,Helvetica,sans-serif;
+	text-transform: uppercase;
+}
+.page-desc{
+	font-size: 14px;
+}
+.page-meta-title{
+	font: 900 20px/48px 'museo-sans-n9','museo-sans',Arial,Helvetica,sans-serif;color: #000;
+}
+.page-meta-sub-title{
+	font: 900 18px/48px 'museo-sans-n9','museo-sans',Arial,Helvetica,sans-serif;color: #333;
+}
+.bckgrnd-pages{
+	background-color: #fff;border-radius:10px;min-height: 400px;margin: 30px 0 30px 0;padding:20px;border:1px solid rgb(231, 231, 231);
+}
+.mrgn-brdcrmp{
+	margin-bottom: 15px;
+}
+.brdcrmp-style:hover{
+	text-decoration: none;
+}
+.brdcrmp-pointer{
+	color: #CCCCCC;
+}
+.brdcrmp-meta-active{
+	color: #999999;
+}
+.page-meta-sub-desc{
+	font-size: 13px;
+}
+.brwse-margin{
+	margin:0;margin: 0 5px 10px;
+}
+.brwse-phto{
+	height: 100px;
+}
+.brwse-cptn-clr{
+	color: rgb(102, 204, 255);
+}
+.brwse-by{
+	color:white;
+}

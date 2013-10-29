@@ -1,0 +1,47 @@
+.wrap-ttle-blue {
+    background: none repeat scroll 0px 0px rgb(16, 138, 199) !important;
+}
+
+.wrap-ttle-blue .page-header{
+	border:none;
+	color: #fff;
+}
+.wrap-ttle-blue .page-header h1{
+	line-height:1.2em;
+	font-size: 3em;
+	text-rendering: optimizelegibility;
+}
+.wrap-ttle-blue .page-header h2 {
+    color: rgba(255, 255, 255, 0.6);
+    font-style: normal;
+    font-size: 1.375em;
+	line-height: 1.3em;
+    margin: 0.4em 0 1em;
+}
+.post-tiitle{
+	color: #08ADBD;
+}
+
+.mrgn-brdcrmp{
+	color:white;
+}
+
+.brdcrmp-style{
+	color:white;
+}
+
+.page-header h1{
+	color: white;
+}
+
+.dashboard-header-ttle {
+	color: #3F3F3F !important;
+}
+
+.left-content-title {
+	color: #3F3F3F !important;
+}
+
+.post-left-content h2, .wrap-post-right-content h2 {
+	color: #3F3F3F !important;
+}

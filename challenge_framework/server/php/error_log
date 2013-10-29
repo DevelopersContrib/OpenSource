@@ -1,0 +1,4 @@
+[09-Sep-2013 20:30:01] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 10200 bytes) in /home/photocha/public_html/server/php/UploadHandler.php on line 359
+[09-Sep-2013 21:47:26] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 10200 bytes) in /home/photocha/public_html/server/php/UploadHandler.php on line 359
+[10-Sep-2013 05:08:26] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 10200 bytes) in /home/photocha/public_html/server/php/UploadHandler.php on line 359
+[10-Sep-2013 05:11:10] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2550 bytes) in /home/photocha/public_html/server/php/UploadHandler.php on line 359
