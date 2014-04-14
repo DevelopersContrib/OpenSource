@@ -3,81 +3,268 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <meta name="viewport" content="width=640" />
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
 
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
     <title>Opensource by DevelopersContrib</title>
   </head>
 
   <body>
-    <header>
-      <div class="inner">
-        <h1>Opensource</h1>
-        <h2>OpenSource Contrib Apps</h2>
-        <a href="https://github.com/DevelopersContrib/OpenSource" class="button"><small>View project on</small>GitHub</a>
-      </div>
-    </header>
+    <a id="forkme_banner" href="https://github.com/DevelopersContrib/OpenSource">View on GitHub</a>
+    <div class="shell">
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>Opensource</h1>
+            <h2>OpenSource Contrib Apps</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/DevelopersContrib/OpenSource/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/DevelopersContrib/OpenSource/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <h1>
+<a name="open-source-codeigniter-survey-library" class="anchor" href="#open-source-codeigniter-survey-library"><span class="octicon octicon-link"></span></a>Open Source Codeigniter Survey Library</h1>
+
+<p>OpenSource Contrib Survey App is a Codeigniter library to create and monitor web surveys. Its easy to install and use.</p>
+
+<p>Installation</p>
+
+<ol>
+<li>Copy application/libraries/contribsurvey.php to your codeigniter file system.</li>
+<li>Get api key from <a href="http://www.developers.contrib.com">http://www.developers.contrib.com</a> </li>
+<li>In your controller, pass your api key when calling the contrib survey library.
+$this-&gt;load-&gt;library('contribsurvey',array("key"=&gt;"xxxxxxxxxxxxxxxx"));</li>
+</ol><p>Contrib Survey Library Function Documentation</p>
+
+<ol>
+<li><p>authenticate - authenticates user to use contrib survey application <br>
+return:<br>
+      true (if authentication success)  <br>
+      false (if authentication failed)<br></p></li>
+<li><p>gettemplates - get all survey templates<br>
+return:<br>
+      array of template php filenames e.g array('AskPeopleDefault.php','CorporateBoxes.php','Floral.php',...)<br></p></li>
+<li><p>getqtypes - get all question types<br>
+return:<br>
+      array of question types e.g. array('single','dropdown','multi',...) <br></p></li>
+<li><p>createsurvey - create new survey<br>
+parameter: <br> 
+      template - (required) template filename<br>
+      title - (required) title of survey<br>
+return:<br>
+      array('success'=&gt;true, 'sid'=&gt;'xxxxx') - if survey created successfully<br>
+      array('success'=&gt;false) - if failed<br>
+possible error:<br>
+      array('error'=&gt; array('title parameter required','template parameter required')<br></p></li>
+<li><p>getsurveys - get all the list or surveys created<br>
+return:<br>
+      array of survey id and title details e.g   array('sid'=&gt;'xxxxx','title'=&gt;'xxxxx','template'=&gt;'Floral.php')<br></p></li>
+<li><p>addquestion - add a question in a survey<br>
+parameter:<br>
+      sid - (required) survey id<br>
+      qtype - (required)  question type (single, dropdown, multi,bigbox, smallbox,pagebreak, info)<br>
+      qvalid - (required) validation (optional, required)<br>
+      question - (required) survey question text<br>
+      options - (required for Single/Dropdown/Multi question type) choices for question separated by (|)<br>
+                e.g. (a.Red|b.Blue|c.Green|d.Black)<br><br>
+return:<br>
+      true - if success<br>
+      false - if failed<br>
+possible error:<br>
+    array('error'=&gt; array('invalid sid',
+                          'sid parameter required',
+                          'qtype parameter required',
+                          'qvalid parameter required',
+                          'question parameter required'
+                    )<br></p></li>
+<li><p>getquestions - get all questions in a survey<br>
+parameter:<br>
+      sid - (required) survey id<br>
+return:<br>
+      array of question details object      <br>
+      e.g array(1) {
+      [0]=&gt;
+      object(stdClass)#16 (6) {
+        ["questionid"]=&gt;;
+        string(1) "1"
+        ["type"]=&gt;
+        string(6) "single"
+        ["validation"]=&gt;
+        string(8) "optional"
+        ["questiontext"]=&gt;
+        string(28) "What is your favorite color?"
+        ["options"]=&gt;
+        object(stdClass)#17 (4) {
+          ["a.Red"]=&gt;
+          string(5) "a.Red"
+          ["b.Blue"]=&gt;
+          string(6) "b.Blue"
+          ["c.Green"]=&gt;
+          string(7) "c.Green"
+          ["d.Black"]=&gt;
+          string(7) "d.Black"
+        }
+        ["scale"]=&gt;
+        NULL
+      }<br>
+possible error:<br>
+      array('error'=&gt; array('invalid sid')<br></p></li>
+<li><p>editsurvey - edit survey details<br>
+parameter:<br>
+      sid - (required) survey id<br>
+      title - (required) new survey title<br>
+      template - (optional) template filename<br>
+return:<br>
+      true - if edit successful<br>
+      false - if failed<br>
+possible error:<br>
+      array('error'=&gt; array('invalid sid','sid parameter required','title parameter required')<br></p></li>
+<li>
+<p>editquestion - edit question in a survey<br>
+parameter:<br>
+      sid - (required) survey id<br>
+      qid - (required) question id<br>
+      qtype - (required)  question type (single, dropdown, multi,bigbox, smallbox,pagebreak, info)<br>
+      qvalid - (required) validation (optional, required)<br>
+      question - (required) survey question text<br>
+      options - (required for Single/Dropdown/Multi question type) choices for question separated by (|)<br>
+                e.g. (a.Red|b.Blue|c.Green|d.Black)<br>
+return:<br>
+      true - if edit successful<br>
+      false - if failed<br></p>
+
+<p>possible error:<br>
+      array('error'=&gt; array('invalid sid','invalid qid','sid parameter required','title parameter required')<br></p>
+</li>
+<li><p>deletequestion - delete a question in a survey<br>
+parameter:<br>
+      sid - (required) survey id<br>
+      qid - (required) question id<br>
+return:<br>
+      true - if delete successful<br>
+      false - if failed<br>
+possible error:<br>
+      array('error'=&gt; array('invalid sid','invalid qid','sid parameter required','qid parameter required')<br></p></li>
+<li><p>deletesurvey - delete survey<br>
+parameter:<br>
+      sid - (required) survey id<br>
+return:<br>
+      true - if delete successful<br>
+      false - if failed<br>
+possible error:<br>
+      array('error'=&gt; array('invalid sid','sid parameter required')<br></p></li>
+<li>
+<p>getreport - get statistics/report of a survey<br>
+parameter:<br>
+      sid - (required) survey id<br>
+      qid - (optional) question id, default is 'all'<br>
+return:<br>
+      array of question and answer details object<br>
+      e.g <br>
+  array(1) {
+  [0]=&gt;
+  object(stdClass)#16 (5) {
+    ["questionid"]=&gt;
+    string(1) "1"
+    ["questiontext"]=&gt;
+    string(28) "What is your favorite color?"
+    ["answered"]=&gt;
+    int(4)
+    ["total"]=&gt;
+    int(4)
+    ["stats"]=&gt;
+    array(4) {
+      [0]=&gt;
+      object(stdClass)#17 (3) {
+        ["option"]=&gt;
+        string(5) "a.Red"
+        ["total"]=&gt;
+        int(2)
+        ["percent"]=&gt;
+        string(3) "50%"
+      }
+      [1]=&gt;
+      object(stdClass)#18 (3) {
+        ["option"]=&gt;
+        string(6) "b.Blue"
+        ["total"]=&gt;
+        NULL
+        ["percent"]=&gt;
+        NULL
+      }
+      [2]=&gt;
+      object(stdClass)#19 (3) {
+        ["option"]=&gt;
+        string(7) "c.Green"
+        ["total"]=&gt;
+        NULL
+        ["percent"]=&gt;
+        NULL
+      }
+      [3]=&gt;
+      object(stdClass)#20 (3) {
+        ["option"]=&gt;
+        string(7) "d.Black"
+        ["total"]=&gt;
+        NULL
+        ["percent"]=&gt;
+        NULL
+      }
+    }
+  }<br>
+} </p>
+
+<p>possible error:<br>
+      array('error'=&gt; array('invalid sid')<br></p>
+</li>
+</ol><p>List of general errors</p>
+
+<pre><code>array('error'=&gt; array(
+  'Api key required',
+  'Invalid api key',
+  'Request not allowed'
+)     
 </code></pre>
+      </section>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/DevelopersContrib">DevelopersContrib</a> can be found on <a href="https://github.com/DevelopersContrib/OpenSource">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-        </section>
-
-        <aside id="sidebar">
-          <a href="https://github.com/DevelopersContrib/OpenSource/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/DevelopersContrib/OpenSource/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
-
-          <p class="repo-owner"><a href="https://github.com/DevelopersContrib/OpenSource"></a> is maintained by <a href="https://github.com/DevelopersContrib">DevelopersContrib</a>.</p>
-
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
     </div>
 
-  
+    
   </body>
 </html>
